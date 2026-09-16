@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sift"
+version = "0.1.0"
+description = "log file analyzer and filter with a rich terminal ui"
+requires-python = ">=3.9"
+dependencies = [
+    "click>=8.1",
+    "rich>=13.0",
+]
+
+[project.scripts]
+sift = "sift.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
